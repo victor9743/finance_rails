@@ -1,15 +1,22 @@
-%table
-  %thead
-    %th id
-    %th
-    %th descricao
-    %th
-    %th valor
-    %th
-  %tbody
-    - @movements.each do |movement|
-      %tr
-        %td= movement.id
-        %td
-        %td= movement.description
-        %td= movement.value
+%section.section
+  .row
+    .col-lg-12
+      .card
+        .card-body
+          %h5.card-title Movements
+          / Table with stripped rows
+          %table.table.datatable
+            %thead
+              %tr
+                %th Id
+                %th Descrição.
+                %th Valor
+                %th Data de Criação
+            %tbody
+              - @movements.each do |movement|
+                %tr
+                  %td= movement.id
+                  %td= movement.description
+                  %td= movement.value
+                  %td= movement.created_at
+          / End Table with stripped rows

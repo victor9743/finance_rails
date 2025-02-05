@@ -1,0 +1,176 @@
+%body
+  %header#header.header.fixed-top.d-flex.align-items-center
+    .d-flex.align-items-center.justify-content-between
+      %a.logo.d-flex.align-items-center{href: "index.html"}
+        %img{alt: "", src: "assets_files/img/logo.png"}/
+        %span.d-none.d-lg-block NiceAdmin
+      %i.bi.bi-list.toggle-sidebar-btn
+    / End Logo
+    .search-bar
+      %form.search-form.d-flex.align-items-center{action: "#", method: "POST"}
+        %input{name: "query", placeholder: "Search", title: "Enter search keyword", type: "text"}/
+        %button{title: "Search", type: "submit"}
+          %i.bi.bi-search
+    / End Search Bar
+    %nav.header-nav.ms-auto
+      %ul.d-flex.align-items-center
+        %li.nav-item.d-block.d-lg-none
+          %a.nav-link.nav-icon.search-bar-toggle{href: "#"}
+            %i.bi.bi-search
+        / End Search Icon
+        %li.nav-item.dropdown
+          %a.nav-link.nav-icon{"data-bs-toggle" => "dropdown", href: "#"}
+            %i.bi.bi-bell
+            %span.badge.bg-primary.badge-number 4
+          / End Notification Icon
+          %ul.dropdown-menu.dropdown-menu-end.dropdown-menu-arrow.notifications
+            %li.dropdown-header
+              You have 4 new notifications
+              %a{href: "#"}
+                %span.badge.rounded-pill.bg-primary.p-2.ms-2 View all
+            %li
+              %hr.dropdown-divider/
+            %li.notification-item
+              %i.bi.bi-exclamation-circle.text-warning
+              %div
+                %h4 Lorem Ipsum
+                %p Quae dolorem earum veritatis oditseno
+                %p 30 min. ago
+            %li
+              %hr.dropdown-divider/
+            %li.notification-item
+              %i.bi.bi-x-circle.text-danger
+              %div
+                %h4 Atque rerum nesciunt
+                %p Quae dolorem earum veritatis oditseno
+                %p 1 hr. ago
+            %li
+              %hr.dropdown-divider/
+            %li.notification-item
+              %i.bi.bi-check-circle.text-success
+              %div
+                %h4 Sit rerum fuga
+                %p Quae dolorem earum veritatis oditseno
+                %p 2 hrs. ago
+            %li
+              %hr.dropdown-divider/
+            %li.notification-item
+              %i.bi.bi-info-circle.text-primary
+              %div
+                %h4 Dicta reprehenderit
+                %p Quae dolorem earum veritatis oditseno
+                %p 4 hrs. ago
+            %li
+              %hr.dropdown-divider/
+            %li.dropdown-footer
+              %a{href: "#"} Show all notifications
+          / End Notification Dropdown Items
+        / End Notification Nav
+        %li.nav-item.dropdown
+          %a.nav-link.nav-icon{"data-bs-toggle" => "dropdown", href: "#"}
+            %i.bi.bi-chat-left-text
+            %span.badge.bg-success.badge-number 3
+          / End Messages Icon
+          %ul.dropdown-menu.dropdown-menu-end.dropdown-menu-arrow.messages
+            %li.dropdown-header
+              You have 3 new messages
+              %a{href: "#"}
+                %span.badge.rounded-pill.bg-primary.p-2.ms-2 View all
+            %li
+              %hr.dropdown-divider/
+            %li.message-item
+              %a{href: "#"}
+                %img.rounded-circle{alt: "", src: "assets_files/img/messages-1.jpg"}/
+                %div
+                  %h4 Maria Hudson
+                  %p Velit asperiores et ducimus soluta repudiandae labore officia est ut...
+                  %p 4 hrs. ago
+            %li
+              %hr.dropdown-divider/
+            %li.message-item
+              %a{href: "#"}
+                %img.rounded-circle{alt: "", src: "assets_files/img/messages-2.jpg"}/
+                %div
+                  %h4 Anna Nelson
+                  %p Velit asperiores et ducimus soluta repudiandae labore officia est ut...
+                  %p 6 hrs. ago
+            %li
+              %hr.dropdown-divider/
+            %li.message-item
+              %a{href: "#"}
+                %img.rounded-circle{alt: "", src: "assets_files/img/messages-3.jpg"}/
+                %div
+                  %h4 David Muldon
+                  %p Velit asperiores et ducimus soluta repudiandae labore officia est ut...
+                  %p 8 hrs. ago
+            %li
+              %hr.dropdown-divider/
+            %li.dropdown-footer
+              %a{href: "#"} Show all messages
+          / End Messages Dropdown Items
+        / End Messages Nav
+        %li.nav-item.dropdown.pe-3
+          %a.nav-link.nav-profile.d-flex.align-items-center.pe-0{"data-bs-toggle" => "dropdown", href: "#"}
+            %img.rounded-circle{alt: "Profile", src: "assets_files/img/profile-img.jpg"}/
+            %span.d-none.d-md-block.dropdown-toggle.ps-2 K. Anderson
+          / End Profile Iamge Icon
+          %ul.dropdown-menu.dropdown-menu-end.dropdown-menu-arrow.profile
+            %li.dropdown-header
+              %h6 Kevin Anderson
+              %span Web Designer
+            %li
+              %hr.dropdown-divider/
+            %li
+              %a.dropdown-item.d-flex.align-items-center{href: "users-profile.html"}
+                %i.bi.bi-person
+                %span My Profile
+            %li
+              %hr.dropdown-divider/
+            %li
+              %a.dropdown-item.d-flex.align-items-center{href: "users-profile.html"}
+                %i.bi.bi-gear
+                %span Account Settings
+            %li
+              %hr.dropdown-divider/
+            %li
+              %a.dropdown-item.d-flex.align-items-center{href: "pages-faq.html"}
+                %i.bi.bi-question-circle
+                %span Need Help?
+            %li
+              %hr.dropdown-divider/
+            %li
+              %a.dropdown-item.d-flex.align-items-center{href: "#"}
+                %i.bi.bi-box-arrow-right
+                %span Sign Out
+          / End Profile Dropdown Items
+        / End Profile Nav
+    / End Icons Navigation
+  / End Header
+  / ======= Sidebar =======
+  %aside#sidebar.sidebar
+    %ul#sidebar-nav.sidebar-nav
+      %li.nav-item
+        %a.nav-link.collapsed{href: "movements"}
+          %i.bi.bi-grid
+          %span Dashboard
+  / End Sidebar
+  %main#main.main
+    = yield
+  / End #main
+  / ======= Footer =======
+  %footer#footer.footer
+    .copyright
+      © Copyright
+      = succeed "." do
+        %strong
+          %span NiceAdmin
+    .credits
+      / All the links in the footer should remain intact.
+      / You can delete the links only if you purchased the pro version.
+      / Licensing information: https://bootstrapmade.com/license/
+      / Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+      Designed by
+      %a{href: "https://bootstrapmade.com/"} BootstrapMade
+  / End Footer
+  %a.back-to-top.d-flex.align-items-center.justify-content-center{href: "#"}
+    %i.bi.bi-arrow-up-short
