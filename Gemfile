@@ -69,5 +69,9 @@ end
 gem 'pg'
 gem 'devise'
 gem 'devise-i18n'
-gem 'dotenv-rails', groups: [:development, :test]
-gem 'faker', groups: [:development, :test]
+
+group :development do
+  gem 'dotenv-rails'
+  gem 'faker'
+  gem 'cpf_cnpj'
+end
