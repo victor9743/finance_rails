@@ -3,6 +3,7 @@ class MovementsController < ApplicationController
         @movements = Movement.all.limit(50)
     end
 
-    def new 
+    def new
+        @movement = Movement.new
     end
 end

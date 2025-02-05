@@ -5,18 +5,22 @@
         .card-body
           %h5.card-title Movements
           / Table with stripped rows
-          %table.table.datatable
-            %thead
-              %tr
-                %th Id
-                %th Descrição.
-                %th Valor
-                %th Data de Criação
-            %tbody
-              - @movements.each do |movement|
+          .table-responsive
+            %table.table.datatable
+              %thead
                 %tr
-                  %td= movement.id
-                  %td= movement.description
-                  %td= movement.value
-                  %td= movement.created_at
-          / End Table with stripped rows
+                  %th Id
+                  %th Descrição.
+                  %th Valor
+                  %th Data de Criação
+              %tbody
+                - @movements.each do |movement|
+                  %tr
+                    %td= movement.id
+                    %td= movement.description
+                    %td= movement.value
+                    %td= movement.created_at
+            / End Table with stripped rows
+          .d-flex.justify-content-end
+            =link_to new_movement_path, class: "btn btn-sm btn-primary" do
+              Adicionar
