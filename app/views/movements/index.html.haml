@@ -1,0 +1,15 @@
+%table
+  %thead
+    %th id
+    %th
+    %th descricao
+    %th
+    %th valor
+    %th
+  %tbody
+    - @movements.each do |movement|
+      %tr
+        %td= movement.id
+        %td
+        %td= movement.description
+        %td= movement.value
