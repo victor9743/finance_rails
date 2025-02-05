@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  movement_type: 1
+  value: 9.99
+  user: one
+
+two:
+  description: MyString
+  movement_type: 1
+  value: 9.99
+  user: two
