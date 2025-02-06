@@ -1,0 +1,8 @@
+{
+  "name": "finance_rails",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/victor9743/finance_rails.git",
+  "author": "Victor Costa <70709626+victor9743@users.noreply.github.com>",
+  "license": "MIT"
+}
